@@ -4,7 +4,7 @@ public class RemoteControlMachine {
      * Declaring main variables
      */
     private double speed;
-    private double price ;
+    private float price ;
     private String condition ;
     private String model;
     private boolean status ;
@@ -16,8 +16,8 @@ public class RemoteControlMachine {
      * @param model
      * @param condition
      */
-    public void RemoteControlMachine(double speed,boolean status , String model , double price ,
-    String condition){
+    public void RemoteControlMachine(double speed, float price , String model , String condition
+            , boolean status ){
         this.speed = speed ;
         this.status = status ;
         this.model = model ;
@@ -28,31 +28,44 @@ public class RemoteControlMachine {
      * Set Setters and Getters
      * @return
      */
-    public double getSpeed (){
+    double getSpeed(){
         return speed ;
     }
+
+    /**
+     * We through an error for illegal arguments
+     * Also we specify each error with specific message
+     * @param speed
+     */
     public void setSpeed (double speed){
+        if (speed >= 60 )
+            throw new IllegalArgumentException("This speed in not legal for street race");
         this.speed = speed ;
     }
     public boolean getStatus (){
         return status ;
     }
     public void setStatus (boolean status){
+        if (status == false )
+            throw new IllegalArgumentException("Please turn on your RC Machine");
         this.status = status ;
     }
     public String getModel (){
         return model ;
     }
     public void setModel (String model){
+        if (model == "Battery ")
+            throw new IllegalArgumentException("Your RC machine is run by Battery we" +
+                    "just accept Nitro Model");
         this.model = model ;
     }
-    public double getPrice (){
+    public float getPrice (){
         return price ;
     }
-    public void setPrice (double price){
+    public void setPrice (float price){
         if (price >= 1000 )
             throw new IllegalArgumentException("It's too expensive ");
-
         this.price = price ;
     }
+
 }
