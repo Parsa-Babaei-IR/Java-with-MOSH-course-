@@ -22,13 +22,11 @@ public class CalculationClass {
     /**
      * Write our own constructor
      * For Calculation class
-     * @param number1
-     * @param number2
      */
-    private void CalculationClass (long number1 , long number2){
-        this.number1 = number1 ;
-        this.number2 = number2 ;
-    }
+//    private void CalculationClass (long number1 , long number2){
+//        this.number1 = number1 ;
+//        this.number2 = number2 ;
+//    }
     private long getNumber1(){
         return number1 ;
     }
@@ -50,7 +48,7 @@ public class CalculationClass {
      */
     public long sumOfEvenFibo(){
         long number3 = 0;
-        long sum = 0l ;
+        long sum = 0 ;
         while (number3   < 4_000_000){
             number3 = number1 + number2 ;
             if (number3 % 2 == 0 ){
