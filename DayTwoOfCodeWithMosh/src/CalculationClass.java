@@ -3,10 +3,14 @@
  * Author : Parsa Babaei
  * Date : 8/22/2024
  */
+/**
+ * Problem 2 of Project Euler Website
+ * Even Fibonacci Numbers
+ */
 
 /**
- * This code will find out the even Fibonacci
- * numbers from term 1 to term 15
+ * This code will find out the summation of even Fibonacci
+ * Where they summation is less than 4 Million
  */
 public class CalculationClass {
     /**
